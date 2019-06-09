@@ -6,11 +6,11 @@ import { Game } from "./components/game/game";
 import { HomeScreen } from "./components/homeScreen/homeScreen";
 
 import { NotFound } from "./components/notFound/NotFound";
-import { Background } from "./components/styled/Background";
+import * as SBackground from "./components/styled/Background";
 
 const App: React.FC = () => {
   return (
-    <Background>
+    <SBackground.Background>
       <Router>
         <div>
           <ul>
@@ -29,7 +29,7 @@ const App: React.FC = () => {
         </Switch>
       </Router>
       <div>Footer</div>
-    </Background>
+    </SBackground.Background>
   );
 };
 
