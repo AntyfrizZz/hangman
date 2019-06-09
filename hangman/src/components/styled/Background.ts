@@ -9,3 +9,9 @@ export const Background = styled.div`
   top: 0;
   left: 0;
 `;
+
+export const Field = styled.div`
+  width: 70%;
+  margin: 0 auto;
+  background: yellow;
+`;

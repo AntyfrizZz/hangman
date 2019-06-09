@@ -11,24 +11,26 @@ import * as SBackground from "./components/styled/Background";
 const App: React.FC = () => {
   return (
     <SBackground.Background>
-      <Router>
-        <div>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/game">Game</Link>
-            </li>
-          </ul>
-        </div>
-        <Switch>
-          <Route exact path="/" component={HomeScreen} />
-          <Route path="/game" component={Game} />
-          <Route component={NotFound} />
-        </Switch>
-      </Router>
-      <div>Footer</div>
+      <SBackground.Field>
+        <Router>
+          <div>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/game">Game</Link>
+              </li>
+            </ul>
+          </div>
+          <Switch>
+            <Route exact path="/" component={HomeScreen} />
+            <Route path="/game" component={Game} />
+            <Route component={NotFound} />
+          </Switch>
+        </Router>
+        <div>Footer</div>
+      </SBackground.Field>
     </SBackground.Background>
   );
 };
