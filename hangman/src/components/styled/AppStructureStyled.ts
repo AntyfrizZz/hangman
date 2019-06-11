@@ -8,6 +8,7 @@ export const Header = styled.div`
 export const Body = styled.div`
   background: yellow;
   flex: 1 1 auto;
+  position: relative;
 `;
 
 export const Footer = styled.div`

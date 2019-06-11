@@ -1,8 +1,8 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { HomeScreen } from "../homeScreen/homeScreen";
+import { HomeScreen } from "../homeScreen/HomeScreen";
 import { NotFound } from "../notFound/NotFound";
-import * as SAppStructure from "../styled/AppStructure";
+import * as SAppStructure from "../styled/AppStructureStyled";
 
 export const Body: React.FC = props => {
   return (
