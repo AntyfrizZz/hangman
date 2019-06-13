@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Link, BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 import * as SAppContainer from "./components/styled/AppStructureStyled";
 import { Header } from "./components/header/Header";

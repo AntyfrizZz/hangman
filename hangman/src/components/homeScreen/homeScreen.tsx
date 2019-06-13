@@ -1,4 +1,5 @@
 import React from "react";
+
 import * as SHomeScreen from "../styled/HomeScreenStyled";
 
 export const HomeScreen: React.FC = () => {

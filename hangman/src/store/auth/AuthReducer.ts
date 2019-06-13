@@ -4,7 +4,7 @@ import { AuthState } from './AuthState';
 import clone from 'clone';
 
 export const authInitialState: AuthState = {
-  isLogedIn: false,
+  isLoggedIn: false,
 };
 
 export const AuthReducer: (state: AuthState | undefined, action: AuthAction) => AuthState = (
@@ -15,10 +15,10 @@ export const AuthReducer: (state: AuthState | undefined, action: AuthAction) => 
 
   switch (action.type) {
     case AuthActionType.LOG_IN:
-      newState.isLogedIn = true;
+      newState.isLoggedIn = true;
       break;
     case AuthActionType.LOG_OUT:
-      newState.isLogedIn = false;
+      newState.isLoggedIn = false;
       break;
     default:
       return state;

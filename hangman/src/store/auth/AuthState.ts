@@ -1,3 +1,3 @@
 export type AuthState = {
-  isLogedIn: boolean;
+  isLoggedIn: boolean;
 };
