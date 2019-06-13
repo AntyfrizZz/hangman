@@ -16,7 +16,7 @@ export const WordForGuess: React.FC<IWordForGuessProps> = (props: IWordForGuessP
     if (selectedLetters.indexOf(letter) !== -1) {
       result.push(<LetterCard letter={letter} />);
     } else {
-      result.push(<div>_</div>);
+      result.push(<LetterCard letter=" " />);
     }
   }
 
