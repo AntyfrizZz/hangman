@@ -11,5 +11,12 @@ export const AllLetters: React.FC = () => {
     letterCards.push(<LetterCard letter={letter} />);
   });
 
-  return <div>{letterCards}</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+      }}>
+      {letterCards}
+    </div>
+  );
 };

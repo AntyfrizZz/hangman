@@ -6,5 +6,12 @@ import { State } from "../../store/State";
 export const SelectedLetters: React.FC = () => {
   const selectedLetters: string[] = useSelector((state: State) => state.GameReducer.selectedLetters);
 
-  return <div>{selectedLetters.join(", ")}</div>;
+  return (
+    <div
+      style={{
+        display: "flex",
+      }}>
+      {selectedLetters.join(", ")}
+    </div>
+  );
 };
