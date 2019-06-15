@@ -7,6 +7,7 @@ export const GameInitialState: GameState = {
   selectedLetters: [],
   winGame: false,
   loseGame: false,
+  wordToGuess: "",
 };
 
 export const GameReducer: (state: GameState | undefined, action: GameAction) => GameState = (
