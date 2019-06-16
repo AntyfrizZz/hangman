@@ -18,7 +18,7 @@ export const GameScreen: React.FC = () => {
   return (
     <div>
       <SelectedLetters />
-      <WordForGuess word="S" />
+      <WordForGuess />
       <AllLetters />
     </div>
   );

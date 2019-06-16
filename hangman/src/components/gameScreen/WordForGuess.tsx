@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
 import { State } from "../../store/State";
@@ -6,17 +6,20 @@ import { State } from "../../store/State";
 import { LetterCard } from "./LetterCard";
 import { winGameAction } from "../../store/game/GameActions";
 
-interface IWordForGuessProps {
-  word: string;
-}
+export const WordForGuess: React.FC = () => {
+  useEffect(() => {
+    if (gotAllLetters) {
+      dispatch(winGameAction());
+    }
+  });
 
-export const WordForGuess: React.FC<IWordForGuessProps> = (props: IWordForGuessProps) => {
-  const selectedLetters: string[] = useSelector((state: State) => state.GameReducer.selectedLetters);
   const dispatch = useDispatch();
+  const selectedLetters: string[] = useSelector((state: State) => state.GameReducer.selectedLetters);
+  const wordForGuess: string = useSelector((state: State) => state.GameReducer.wordToGuess);
 
-  const result: JSX.Element[] = [];
   let gotAllLetters: boolean = true;
-  for (const letter of props.word) {
+  const result: JSX.Element[] = [];
+  for (const letter of wordForGuess) {
     if (selectedLetters.indexOf(letter) !== -1) {
       result.push(<LetterCard letter={letter} />);
     } else {
@@ -25,15 +28,12 @@ export const WordForGuess: React.FC<IWordForGuessProps> = (props: IWordForGuessP
     }
   }
 
-  if (gotAllLetters) {
-    // dispatch(winGameAction());
-  }
-
   return (
     <div
       style={{
-        display: "flex",
-      }}>
+        display: "flex"
+      }}
+    >
       {result}
     </div>
   );

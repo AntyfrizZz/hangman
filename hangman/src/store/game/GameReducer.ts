@@ -7,12 +7,12 @@ export const GameInitialState: GameState = {
   selectedLetters: [],
   winGame: false,
   loseGame: false,
-  wordToGuess: "",
+  wordToGuess: "ABC"
 };
 
 export const GameReducer: (state: GameState | undefined, action: GameAction) => GameState = (
   state: GameState = GameInitialState,
-  action: GameAction,
+  action: GameAction
 ): GameState => {
   const newState: GameState = clone(state);
 
@@ -25,6 +25,9 @@ export const GameReducer: (state: GameState | undefined, action: GameAction) => 
       break;
     case GameActionType.LOSE_GAME:
       newState.loseGame = true;
+      break;
+    case GameActionType.START_NEW_GAME:
+      newState.wordToGuess = action.wordToGuess;
       break;
     default:
       return state;
