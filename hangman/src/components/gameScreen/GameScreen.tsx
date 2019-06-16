@@ -6,12 +6,12 @@ import { State } from "../../store/State";
 import { SelectedLetters } from "./SelectedLetters";
 import { AllLetters } from "./AllLetters";
 import { WordForGuess } from "./WordForGuess";
+import { GameStateEnum } from "../../enums/GameStateEnum";
 
 export const GameScreen: React.FC = () => {
-  const winGame: boolean = useSelector((state: State) => state.GameReducer.winGame);
-  const loseGame: boolean = useSelector((state: State) => state.GameReducer.loseGame);
+  const gameState: GameStateEnum = useSelector((state: State) => state.GameReducer.gameResult);
 
-  if (winGame) {
+  if (gameState === GameStateEnum.Win) {
     return <div>win</div>;
   }
 

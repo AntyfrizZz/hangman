@@ -2,11 +2,11 @@ import { GameAction, GameActionType } from "./GameActions";
 import { GameState } from "./GameState";
 
 import clone from "clone";
+import { GameStateEnum } from "../../enums/GameStateEnum";
 
 export const GameInitialState: GameState = {
   selectedLetters: [],
-  winGame: false,
-  loseGame: false,
+  gameResult: GameStateEnum.None,
   wordToGuess: "ABC"
 };
 
@@ -21,10 +21,10 @@ export const GameReducer: (state: GameState | undefined, action: GameAction) => 
       newState.selectedLetters.push(action.letter);
       break;
     case GameActionType.WIN_GAME:
-      newState.winGame = true;
+      newState.gameResult = GameStateEnum.Win;
       break;
     case GameActionType.LOSE_GAME:
-      newState.loseGame = true;
+      newState.gameResult = GameStateEnum.Lose;
       break;
     case GameActionType.START_NEW_GAME:
       newState.wordToGuess = action.wordToGuess;
