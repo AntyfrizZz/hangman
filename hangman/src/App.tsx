@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 import * as SAppContainer from "./components/styled/AppStructureStyled";
 import { Header } from "./components/header/Header";
@@ -10,11 +10,11 @@ const App: React.FC = () => {
   return (
     <SAppContainer.StaticBackground>
       <SAppContainer.Field>
-        <Router>
+        <BrowserRouter>
           <Header />
           <Body />
           <Footer />
-        </Router>
+        </BrowserRouter>
       </SAppContainer.Field>
     </SAppContainer.StaticBackground>
   );
