@@ -5,10 +5,10 @@ export enum GameActionType {
   START_NEW_GAME = "START_NEW_GAME",
 }
 
-export type GameAction = GameSelectLetter | WinGame | LoseGame | StartNewGame;
+export type GameAction = SelectLetter | WinGame | LoseGame | StartNewGame;
 
-type GameSelectLetter = { type: GameActionType.SELECT_LETTER, letter: string };
-export const selectLetterAction = (letter: string): GameSelectLetter => ({ type: GameActionType.SELECT_LETTER, letter });
+type SelectLetter = { type: GameActionType.SELECT_LETTER, letter: string };
+export const selectLetterAction = (letter: string): SelectLetter => ({ type: GameActionType.SELECT_LETTER, letter });
 
 type WinGame = { type: GameActionType.WIN_GAME};
 export const winGameAction = (): WinGame => ({type: GameActionType.WIN_GAME});

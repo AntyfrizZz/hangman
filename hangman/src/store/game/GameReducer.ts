@@ -7,7 +7,8 @@ import { GameStateEnum } from "../../enums/GameStateEnum";
 export const GameInitialState: GameState = {
   selectedLetters: [],
   gameResult: GameStateEnum.None,
-  wordToGuess: "ABC"
+  wordToGuess: "ABC",
+  wrongLetters: 0
 };
 
 export const GameReducer: (state: GameState | undefined, action: GameAction) => GameState = (
@@ -19,6 +20,9 @@ export const GameReducer: (state: GameState | undefined, action: GameAction) => 
   switch (action.type) {
     case GameActionType.SELECT_LETTER:
       newState.selectedLetters.push(action.letter);
+      if (state.wordToGuess.indexOf(action.letter) === -1) {
+        newState.wrongLetters++;
+      }
       break;
     case GameActionType.WIN_GAME:
       newState.gameResult = GameStateEnum.Win;
