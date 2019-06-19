@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const HangPartsContainer = styled.div`
   position: relative;
@@ -33,6 +33,15 @@ export const Hang = {
     right: 100px;
   `,
 };
+
+export const Rope = styled.div`
+  position: absolute;
+  width: 6px;
+  height: 20px;
+  background-color: grey;
+  left: 247px;
+  top: 175px;
+`;
 
 export const Ground = styled.div`
   position: absolute;

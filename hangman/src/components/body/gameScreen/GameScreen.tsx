@@ -10,7 +10,6 @@ import { HangParts } from "./hangParts/HangParts";
 
 export const GameScreen: React.FC = () => {
   const gameResult: GameStateEnum = useSelector((state: State) => state.GameReducer.gameResult);
-  const wrongLetters: GameStateEnum = useSelector((state: State) => state.GameReducer.wrongLettersCount);
 
   if (gameResult === GameStateEnum.Win) {
     return <div>win</div>;
