@@ -2,7 +2,7 @@ import React from "react";
 
 import { LetterCard } from "./LetterCard";
 
-import { GameService } from "../../services/GameService";
+import { GameService } from "../../../services/GameService";
 
 export const AllLetters: React.FC = () => {
   const letters: string[] = GameService.getAllLetters();

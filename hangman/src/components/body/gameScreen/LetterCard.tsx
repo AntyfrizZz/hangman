@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { selectLetterAction } from "../../store/game/GameActions";
+import { selectLetterAction } from "../../../store/game/GameActions";
 
-import * as SGameScreen from "../styled/GameScreenStyled";
+import * as SGameScreen from "../../styled/GameScreenStyled";
 
 interface ILetterCardProps {
   letter: string;

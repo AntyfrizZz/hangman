@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import * as SHomeScreen from "../styled/HomeScreenStyled";
+import * as SHomeScreen from "../../styled/HomeScreenStyled";
 import { Redirect } from "react-router";
 
 export const HomeScreen: React.FC = () => {

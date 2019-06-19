@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { State } from "../../store/State";
+import { State } from "../../../store/State";
 
 import { LetterCard } from "./LetterCard";
-import { winGameAction } from "../../store/game/GameActions";
+import { winGameAction } from "../../../store/game/GameActions";
 
 export const WordForGuess: React.FC = () => {
   useEffect(() => {

@@ -2,9 +2,9 @@ import React from "react";
 
 import { Switch, Route } from "react-router-dom";
 
-import { HomeScreen } from "../homeScreen/homeScreen";
-import { GameScreen } from "../gameScreen/GameScreen";
-import { NotFound } from "../notFound/NotFound";
+import { HomeScreen } from "./homeScreen/homeScreen";
+import { GameScreen } from "./gameScreen/GameScreen";
+import { NotFound } from "./notFound/NotFound";
 
 import * as SAppStructure from "../styled/AppStructureStyled";
 
