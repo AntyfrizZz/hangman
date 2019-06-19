@@ -4,5 +4,5 @@ export type GameState = {
   selectedLetters: string[];
   gameResult: GameStateEnum;
   wordToGuess: string;
-  wrongLetters: number;
+  wrongLettersCount: number;
 };

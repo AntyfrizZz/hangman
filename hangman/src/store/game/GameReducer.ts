@@ -8,7 +8,7 @@ export const GameInitialState: GameState = {
   selectedLetters: [],
   gameResult: GameStateEnum.None,
   wordToGuess: "ABC",
-  wrongLetters: 0
+  wrongLettersCount: 0
 };
 
 export const GameReducer: (state: GameState | undefined, action: GameAction) => GameState = (
@@ -21,7 +21,7 @@ export const GameReducer: (state: GameState | undefined, action: GameAction) => 
     case GameActionType.SELECT_LETTER:
       newState.selectedLetters.push(action.letter);
       if (state.wordToGuess.indexOf(action.letter) === -1) {
-        newState.wrongLetters++;
+        newState.wrongLettersCount++;
       }
       break;
     case GameActionType.WIN_GAME:
