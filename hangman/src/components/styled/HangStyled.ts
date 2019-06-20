@@ -84,7 +84,7 @@ export const Person = {
     transform: rotate(45deg);
   `,
   RightFoot: styled.div`
-       background-color: black;
+    background-color: black;
     height: 40px;
     width: 10px;
     border-radius: 15px;
