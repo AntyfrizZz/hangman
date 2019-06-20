@@ -34,6 +34,67 @@ export const Hang = {
   `,
 };
 
+export const Person = {
+  Head: styled.div`
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    position: absolute;
+    top: 195px;
+    left: 235px;
+  `,
+  Body: styled.div`
+    background-color: black;
+    height: 80px;
+    width: 10px;
+    border-radius: 15px;
+    position: absolute;
+    top: 225px;
+    left: 245px;
+  `,
+  LeftArm: styled.div`
+    background-color: black;
+    height: 40px;
+    width: 10px;
+    border-radius: 15px;
+    position: absolute;
+    top: 225px;
+    left: 230px;
+    transform: rotate(45deg);
+  `,
+  RightArm: styled.div`
+    background-color: black;
+    height: 40px;
+    width: 10px;
+    border-radius: 15px;
+    position: absolute;
+    top: 225px;
+    left: 260px;
+    transform: rotate(135deg);
+  `,
+  LeftFoot: styled.div`
+    background-color: black;
+    height: 40px;
+    width: 10px;
+    border-radius: 15px;
+    position: absolute;
+    top: 290px;
+    left: 230px;
+    transform: rotate(45deg);
+  `,
+  RightFoot: styled.div`
+       background-color: black;
+    height: 40px;
+    width: 10px;
+    border-radius: 15px;
+    position: absolute;
+    top: 290px;
+    left: 260px;
+    transform: rotate(135deg);
+  `,
+};
+
 export const Rope = styled.div`
   position: absolute;
   width: 6px;
